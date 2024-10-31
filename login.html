@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="css/loginStyle.css">
+</head>
+<body>
+<header class="hero-section">
+    <section class="container abs">
+        <h3>Connexion</h3>
+        <form id="loginForm" action="login.html" method="post">
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur">
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe">
+
+            <input type="submit" value="Se connecter">
+        </form>
+    </section>
+</header>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        window.location.href = 'userLogin.html';
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelociTrack - Vélos de Qualité</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero-section">
+    <div class="overlay">
+        <img src="img/img.png" alt="VelociTrack Logo" class="logo">
+        <h1>VelociTrack</h1>
+        <p>Roulez vers l’avenir avec style et performance</p>
+    </div>
+</header>
+
+
+<nav class="navbar">
+    <div class="navbar-left">
+        <span class="user-text">User</span>
+    </div>
+
+    <div class="navbar-brand">VelociTrack</div>
+
+    <div class="cart">
+        <img src="img/shopping-cart.png" alt="Panier" class="cart-icon">
+        <span id="cart-count">0</span>
+    </div>
+</nav>
+
+
+<main>
+    <section id="history">
+        <h2>Notre Histoire</h2>
+        <p>Depuis nos débuts, nous avons placé l’innovation et la durabilité au cœur de nos créations. VelociTrack est née d'une passion pour le cyclisme et d'un engagement envers l'excellence.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Durabilité</h3>
+            <p>Nos vélos sont fabriqués avec des matériaux robustes pour une longue durée de vie.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Innovation</h3>
+            <p>Technologies avancées pour un confort et une efficacité accrus.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Design</h3>
+            <p>Un design élégant et aérodynamique qui vous fait rouler avec style.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Service Client</h3>
+            <p>Un support dédié pour répondre à toutes vos questions.</p>
+        </div>
+    </section>
+
+    <section class="prod">
+        <h2 class="title">Nos Produits</h2>
+        <div id="products">
+            <div class="product-card">
+                <h3>VelociTrack Speedster</h3>
+                <img src="img/velo.jpg" alt="VelociTrack Speedster">
+                <p>Un vélo de route rapide et léger, parfait pour les cyclistes ambitieux.</p>
+                <button onclick="addToCart()">Ajouter au panier</button>
+            </div>
+            <div class="product-card">
+                <h3>VelociTrack Trailblazer</h3>
+                <img src="img/image-1.jpeg" alt="VelociTrack Speedster">
+                <p>Idéal pour les aventures hors des sentiers battus, avec une suspension tout terrain.</p>
+                <button onclick="addToCart()">Ajouter au panier</button>
+            </div>
+            <div class="product-card">
+                <h3>VelociTrack Urban</h3>
+                <img src="img/image-14.jpeg" alt="VelociTrack Speedster">
+                <p>Conçu pour le confort et l’efficacité en milieu urbain, avec un cadre robuste.</p>
+                <button onclick="addToCart()">Ajouter au panier</button>
+            </div>
+            <div class="product-card">
+                <h3>VelociTrack Cruiser</h3>
+                <img src="img/image.jpeg" alt="VelociTrack Speedster">
+                <p>Parfait pour les balades relaxantes, avec une selle confortable et un design classique.</p>
+                <button onclick="addToCart()">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h3 class="contacted">Nous Contacter</h3>
+        <form action="">
+            <label for="fname">Prénom</label>
+            <input type="text" id="fname" name="firstname" placeholder="Entrez votre prénom">
+
+            <label for="lname">Nom de Famille</label>
+            <input type="text" id="lname" name="lastname" placeholder="Entrez votre nom de famille">
+
+            <label for="country">Pays</label>
+            <select id="country" name="country">
+                <option value="France">France</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Autre">Autre</option>
+            </select>
+
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Écrivez votre message ici..." style="height:200px"></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 VelociTrack - Tous droits réservés.</p>
+        <p>
+            <a href="./index.html">Conditions d'utilisation</a> |
+            <a href="./index.html">Politique de confidentialité</a> |
+            <a href="./index.html">Contactez-nous</a>
+        </p>
+    </footer>
+
+</main>
+
+</body>
+<script src="js/script.js"></script>
+<script>
+    const username = localStorage.getItem('username');
+    if (username) {
+        document.querySelector('.user-text').textContent = `Utilisateur: ${username}`;
+    }
+</script>
+</html>
